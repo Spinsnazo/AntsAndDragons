@@ -1,7 +1,5 @@
 #include "Ant.h"
 
-#include "Ant.h"
-
 std::vector<Message> Ant::Notifications = {};
 
 Ant::Ant(int a, int b)
