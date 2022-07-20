@@ -11,7 +11,7 @@ Board::Board()
 	numOfDragons = 4;
 	numOfFood = 7;
 
-	this->ClearMap();
+	ClearMap();
 
 	for (int i = 0; i < numOfAnts; i++)
 		Ants.push_back(Ant(rand() % WIDTH, rand() % LENGTH));
@@ -119,7 +119,7 @@ void Board::Update()
 		if (!is_eaten) it++;
 	}
 
-	this->ClearMap();
+	ClearMap();
 
 	for (unsigned int i = 0; i < Food.size(); i++)
 	{
