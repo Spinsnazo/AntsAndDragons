@@ -44,6 +44,8 @@ void Board::Update()
 		Map[std::get<1>(Food[i])][std::get<0>(Food[i])] = 'F';
 	}
 
+	Ant::UpdateAntNotifications(); // Remove the oldest notifications of the ants to avoid pointless moves
+
 	for (unsigned int i = 0; i < Ants.size(); i++)
 	{
 		Ants[i].Move();

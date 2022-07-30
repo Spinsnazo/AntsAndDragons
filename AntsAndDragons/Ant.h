@@ -13,6 +13,7 @@ public:
     void Move();
     void Eat(int);
     void InformOthers(char[][WIDTH]);
+    static void UpdateAntNotifications();
     static void PrintNotifications(int n);   // n - how many last messages should be printed
 private:
     static std::vector<Message> Notifications;

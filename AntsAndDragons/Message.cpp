@@ -5,6 +5,7 @@ Message::Message(int a, int b, const std::string& Msg)
     x = a;
     y = b;
     msg = Msg;
+    importance = 5;
 }
 
 bool Message::operator==(const Message& sec) {
@@ -19,6 +20,16 @@ int Message::GetX()
 int Message::GetY()
 {
     return y;
+}
+
+int Message::GetImportance()
+{
+    return importance;
+}
+
+void Message::LowerImportance()
+{
+    if (importance > 0) importance--;
 }
 
 std::string Message::GetMsg() {

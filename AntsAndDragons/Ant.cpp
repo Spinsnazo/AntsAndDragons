@@ -188,6 +188,17 @@ void Ant::InformOthers(char Map[][WIDTH])
     }
 }
 
+void Ant::UpdateAntNotifications()
+{
+    for (unsigned int i = 0; i < Notifications.size(); i++) {
+        Notifications[i].LowerImportance();
+        if (Notifications[i].GetImportance() == 0) {
+            Notifications.erase(Notifications.begin() + i);
+            i--;
+        }
+    }
+}
+
 void Ant::PrintNotifications(int n)
 {
     unsigned int i;
