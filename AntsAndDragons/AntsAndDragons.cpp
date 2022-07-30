@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include "Board.h"
 
 
@@ -30,7 +29,7 @@ int main()
         std::cout << "x - terminate the program, enter antoher key to continue...\n";
         std::cin >> ch;
         if (ch == 'x') break;
-        system("cls");
+        std::cout << "\n\n\n\n\n\n\n\n\n\n"; // Put 10 newlines to 'clear' the screen
     }
     std::cin >> ch;
     return 0;
