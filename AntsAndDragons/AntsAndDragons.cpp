@@ -18,12 +18,12 @@ int main()
         B.PrintLog();
         if (B.IsFinished())
         {
-            if (B.NoAnts())
-                std::cout << "Dragons have won!\n";
-            else if (B.NoDragons())
-                std::cout << "Ants have won!\n";
-            else
+            if (B.NoAnts() && B.NoDragons())
                 std::cout << "An indecisive fight!\n";
+            else if (B.NoAnts())
+                std::cout << "Dragons have won!\n";
+            else
+                std::cout << "Ants have won!\n";
             break;
         }
         std::cout << "x - terminate the program, enter antoher key to continue...\n";
